@@ -5,41 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- font icon -->
     <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <!-- style css -->
     <link rel="stylesheet" href="./assest/css/style.css" />
-    <!-- link js -->
-    <script src="./assest/js/main.js"></script>
 
     <title>T&T PET CARE</title>
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- header -->
     <header id="header">
-      <div class="header_left">
+      <div class="logo">
         <img src="./assest/image/logo3.png" alt="logo" />
-        <a href="#"><h1><span style="color: #fa0;">Pet Ca</span><span style=" color: #ffe55e;">re T&T</span></h1></a>
+        <a href="#">
+          <h1>
+            <span style="color: #6528f7">Pet Ca</span
+            ><span style="color: #a076f9">re T&T</span>
+          </h1>
+        </a>
       </div>
-      <nav class="nav">
+      <nav class="navbar">
         <ul class="menu">
-          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#" class="active">Trang&nbsp;chủ</a></li>
           <li><a href="#">Giới thiệu</a></li>
           <li><a href="#">Dịch vụ</a></li>
-          <li><a href="#">Làm đẹp</a></li>
+          <li><a href="#">đặt lịch hẹn</a></li>
           <li><a href="#">Liên hệ</a></li>
         </ul>
       </nav>
-      <nav>
-        <ul class="menu right">
-          <li>
-            <a href="#"><i class="fa-thin fa-magnifying-glass"></i></a>
-          </li>
-          <li><a href="#" class="btn_sign">Sign</a></li>
-          <li><a href="#" class="btn_login">Login</a></li>
-        </ul>
-      </nav>
+      <div class="search_box">
+        <input type="text" class="search_box_input" placeholder="Tìm kiếm" />
+        <a href="#" class="search_box_btn"><i class="bx bx-search"></i></a>
+      </div>
     </header>
+    <!-- slider -->
+    <div class="slider">
+      <div class="list">
+        <div class="item">
+          <img src="./assest/image/slide1.jpg" alt="" />
+          <div class="content">
+            <h2>CHÀO MỪNG BẠN ĐẾN VỚI PET CARE T&T</h2>
+            <div class="buttons">
+              <ul class="btn_box">
+                <a href="#">Xem thêm</a>
+                <a href="#">Đặt lịch hẹn</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./assest/image/slide2.jpg" alt="" />
+        </div>
+        <div class="item">
+          <img src="./assest/image/slide3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="prev"><</button>
+        <button id="next">></button>
+      </div>
+      <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <!-- link js -->
+    <script src="./assest/js/main.js"></script>
   </body>
 </html>

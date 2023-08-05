@@ -4,55 +4,176 @@
   margin: 0;
   box-sizing: border-box;
   color: black;
+}
+html{
+  font-size: 62.5%;
+}
+body {
   font-family: Arial, Helvetica, sans-serif;
 }
-/* start header */
+/*header */
 #header {
   display: flex;
   margin: 0 auto;
   max-width: 90%;
-  padding: 1em 0;
 }
-.header_left {
+.logo {
   width: 20%;
   display: flex;
 }
-.header_left a {
-  font-size: 10px;
-  text-transform: uppercase;
+.logo a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
   display: flex;
   flex-direction: column; /*canh dọc*/
   justify-content: center; /*căn chữ ra giữa theo chiều dọc*/
-  margin-left: 10px; /*cách cái logo ra*/
+  margin-left: 10px; /*cách cái logo ra */
 }
-.heder_left img {
-  width: 100%;
-}
-.nav {
+.navbar {
   width: 60%;
   margin-right: auto;
-}
-.menu right {
-  width: 20%;
 }
 ul.menu {
   display: flex;
 }
-.menu > li {
+.menu li {
   list-style-type: none;
   margin: 1rem;
 }
-.menu > li > a {
+.menu li a {
   text-decoration: none;
   display: block;
   padding: 1rem;
   font-size: 16px;
   text-transform: uppercase;
 }
-.menu > li:hover > a {
-  background: linear-gradient(to right, #fa0, #ffe55e);
-  border-radius: 10px;
-  color: white;
+.menu li a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+  position: relative;
+  display: block;
+  margin: auto;
+  transition: 0.5s ease-out;
 }
-/* end header */
+.menu li a:hover::after {
+  width: 100%;
+}
+.search_box {
+  width: 20%;
+  padding: 0.5rem;
+  background: #fff;
+  border-radius: 15px;
+  border: 1px solid black;
+  width: 240px;
+  height: 30px;
+  margin-top: 1%;
+}
+.search_box .search_box_input {
+  width: 200px;
+}
+.search_box_btn {
+  text-decoration: none;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  font-size: 20px;
+  background: #fff;
+  color: #000;
+}
+.search_box_input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  line-height: 26px;
+  color: #000;
+}
+/* slider */
+.slider {
+  width: 1600px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider .list img {
+  width: 1600px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.content {
+  position: absolute;
+  color: #000;
+  background: #000;
+  display: block;
+}
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .slider{
+    height: 200px;
+  }
+}
