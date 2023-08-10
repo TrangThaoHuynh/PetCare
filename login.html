@@ -1,25 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link css -->
-    <link rel="stylesheet" href="./assest/css/login_style.css">
-    <title>Đăng nhập</title>
-</head>
-<body>
-    <div id="wrapper">
-        <form action="" id="form-login">
-            <h1 class="form-heading">Form đăng nhập</h1>
-            <div form-group>
-                <input type="text" class="form-input" placeholder="Tên đăng nhập">
-            </div>
-            <div form-group>
-                <input type="password" class="form-input" placeholder="Mật khẩu">
-            </div>
-            <input type="submit" value="Đăng nhập" class="form-submit">
-        </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <!-- link css -->
+    <link rel="stylesheet" href="./assest/css/login_style.css" />
+
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+      integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="form sign_in">
+          <h3>Đăng nhập vào T&T</h3>
+
+          <form action="#" id="form_input">
+            <div class="type">
+              <input type="email" placeholder="Email" name="" id="email" />
+            </div>
+            <div class="type">
+              <input
+                type="password"
+                placeholder="Mật khẩu"
+                name=""
+                id="password"
+              />
+            </div>
+
+            <div class="forgot">
+              <span>Quên mật khẩu?</span>
+            </div>
+
+            <button class="btn bkg">Đăng nhập</button>
+          </form>
+        </div>
+
+        <div class="form sign_up">
+          <h3>Đăng ký tài khoản T&T</h3>
+          <span>hoặc sử dụng email của bạn để đăng ký</span>
+
+          <form action="#" id="form_input">
+            <div class="type">
+              <input
+                type="text"
+                name=""
+                placeholder="Tên đăng nhập"
+                id="name"
+              />
+            </div>
+            <div class="type">
+              <input type="email" name="" placeholder="Email" id="email" />
+            </div>
+            <div class="type">
+              <input
+                type="password"
+                name=""
+                placeholder="Mật khẩu"
+                id="password"
+              />
+            </div>
+
+            <button class="btn bkg">Đăng ký</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="page page_signIn">
+          <h3>T&T chào mừng bạn trở lại!</h3>
+          <p>
+            Để tiếp tục đồng hành cùng chúng tôi, vui lòng đăng nhập bằng thông
+            tin cá nhân của bạn.
+          </p>
+
+          <button class="btn btnSign-in">
+            Đăng ký <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+
+        <div class="page page_signUp">
+          <h3>Chào bạn!</h3>
+          <p>
+            Nhập thông tin cá nhân của bạn và bắt đầu đồng hành cùng chúng tôi.
+          </p>
+
+          <button class="btn btnSign-up">
+            <i class="bi bi-arrow-left"></i> Đăng nhập
+          </button>
+        </div>
+      </div>
     </div>
-</body>
+
+    <!-- link script -->
+    <script src="./assest/js/login.js"></script>
+  </body>
 </html>
