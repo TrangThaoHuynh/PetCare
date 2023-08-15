@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,17 +155,42 @@ body {
   display: inline-block;
   outline: none;
   color: #fff;
-  /* color: #0072ff; */
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 550;
   background-color: transparent;
   padding: 12px 45px;
   border-radius: 22px;
-  /* border: 1.5px solid #0072ff; */
   border: 1.5px solid #fff;
   cursor: pointer;
-  /* position: relative; */
+  position: relative;
+}
+.bkg {
+  color: #0072ff;
+  border: 1.5px solid #0072ff;
+  padding: 12px 45px;
+  border-radius: 22px;
+  position: relative;
+}
+.bkg::before {
+  content: "";
+  width: 0;
+  height: 100%;
+  border-radius: 22px;
+  /* padding: 12px 45px; */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(90deg, #0072ff 0%, #00d4ff 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+.bkg:hover::before {
+  width: 100%;
+}
+.bkg:hover {
+  color: #fff;
 }
 .form h3 {
   color: #222;
@@ -201,7 +226,4 @@ body {
   margin-top: 12px;
   text-align: left;
   margin-bottom: 20px;
-}
-.bkg {
-  background-color: blue;
 }
