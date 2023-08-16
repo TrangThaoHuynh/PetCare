@@ -40,3 +40,25 @@ dots.forEach((li, key) => {
 window.onresize = function (event) {
   reloadSlider();
 };
+// document.getElementById("next_btn").onclick = function () {
+//   let widthItem = document.querySelector(".box").offsetWidth;
+//   document.getElementById("formList").scrollLeft += widthItem;
+// };
+// document.getElementById("prev_btn").onclick = function () {
+//   let widthItem = document.querySelector(".item").offsetWidth;
+//   document.getElementById("formList").scrollLeft -= widthItem;
+// };
+// Mở menu ra
+let navbar_toggle = document.querySelector(".navbar_toggle");
+let wrapper = document.querySelector(".wrapper");
+navbar_toggle.onclick = function(){
+  navbar_toggle.classList.toggle('open'); //thêm class gọi toggle có thì ẩn chưa thì thêm vào
+};
+// navbar_toggle.addEventListener("click", ()=>{
+//   wrapper.classList.toggle('open');
+// });
+$(document).ready(function(){
+  $('#navbar_toggle').click(function(){
+    $('.navbar .menu').sliderToggle();
+  })
+})

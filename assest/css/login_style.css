@@ -105,8 +105,6 @@ form.sign-up-form {
   border-radius: 50px;
   background: #1fd1f9;
   color: #fff;
-  /* border: 2px solid #1fd1f9; */
-  /* background: #fff; */
   font-weight: 600;
   margin: 10px 0;
   text-transform: uppercase;
@@ -115,7 +113,6 @@ form.sign-up-form {
 .btn:hover {
   color: #fff;
   background: #000;
-  /* background-color: #1fd1f9; */
 }
 .social-text {
   margin: 10px 0;
