@@ -11,7 +11,8 @@ body {
 #form-booking {
   width: 100%;
   /* width: 713px; */
-
+  padding-top: 6%;
+  position: relative;
   height: 1396px;
   max-width: 50%;
   margin-right: auto;

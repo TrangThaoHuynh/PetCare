@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- link css -->
+    <!-- css style main -->
+    <link rel="stylesheet" href="./assest/css/style.css" />
+
+    <!-- css book -->
     <link rel="stylesheet" href="./assest/css/book.css" />
 
     <!-- link icon -->
@@ -12,9 +15,70 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assest/image/logo.svg"
+      type="image/x-icon"
+    />
     <title>Đặt lịch ngay</title>
   </head>
   <body>
+    <!-- header -->
+    <header id="header">
+      <div class="content">
+        <nav class="navbar">
+          <!-- logo -->
+          <a href="" class="logo">
+            <img src="./assest/image/logo.svg" alt="Logo" />
+            <span>Ani<span class="main-color">PET</span></span>
+          </a>
+
+          <!-- Navigation -->
+          <ul class="menu" id="menu">
+            <li><a href="#" class="item" id="ab">Trang&nbsp;chủ</a></li>
+            <li><a href="introduce.html" class="item">Giới&nbsp;Thiệu</a></li>
+            <li class="sub">
+              <a href="#" class="item">
+                Dịch&nbsp;Vụ
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: 0.5s"
+                >
+                  <path
+                    d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                  ></path>
+                </svg>
+              </a>
+              <ul class="sub_menu">
+                <li><a href="#">Khám và chữa bệnh</a></li>
+                <li><a href="#">Tiêm chủng cho thú cưng</a></li>
+                <li><a href="#">Thú y tại nhà</a></li>
+                <li><a href="#">Cắt tỉa làm đẹp</a></li>
+                <li><a href="#">Khách sạn thú cưng</a></li>
+              </ul>
+            </li>
+            <li><a href="book.html" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
+            <li><a href="#" class="item">Liên&nbsp;hệ</a></li>
+          </ul>
+
+          <!-- Button -->
+          <div class="actions">
+            <a href="./login.html" class="login btn">
+              <p class="text">Đăng nhập</p>
+            </a>
+          </div>
+          <!-- Nav MOBLE -->
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- FORM MAIN -->
     <form
       id="form-booking"
       action="http:/abc.com"
@@ -64,7 +128,10 @@
             class="txt-dangky notNull"
             id="yourname"
           />
-          <i id="yourname_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="yourname_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -98,7 +165,10 @@
             class="txt-dangky notNull"
             id="address"
           />
-          <i id="address_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="address_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -108,7 +178,10 @@
         </h1>
         <div class="input">
           <input name="time" type="date" class="txt-dangky notNull" id="time" />
-          <i id="time_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="time_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -124,7 +197,10 @@
             class="txt-dangky notNull"
             id="petname"
           />
-          <i id="petname_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="petname_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -149,7 +225,10 @@
             class="txt-dangky notNull"
             id="sexual"
           />
-          <i id="sexual_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="sexual_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -172,7 +251,10 @@
             step="0.1"
             id="age"
           />
-          <i id="age_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="age_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -190,7 +272,10 @@
             step="1"
             id="kilo"
           />
-          <i id="kilo_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="kilo_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
 
@@ -206,7 +291,10 @@
             placeholder="Nhập một vài mô tả về tình trạng của các bé để các chuyên viên của chúng tôi có thể hỗ trợ bạn tốt nhất..."
             id="notes"
           ></textarea>
-          <i id="notes_empty"><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là một trường hợp bắt buộc.</i>
+          <i id="notes_empty"
+            ><i class="bx bx-error-circle" style="font-size: 15px"></i>Đây là
+            một trường hợp bắt buộc.</i
+          >
         </div>
       </div>
       <div class="btn">
