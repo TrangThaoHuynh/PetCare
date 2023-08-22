@@ -1,64 +1,89 @@
-// Slider
-let slider = document.querySelector(".slider .list");
-let items = document.querySelectorAll(".slider .list .item");
-let next = document.getElementById("next");
-let prev = document.getElementById("prev");
-let dots = document.querySelectorAll(".slider .dots li");
-
-let lengthItems = items.length - 1; //lấy số lượng ảnh
-let active = 0;
-next.onclick = function () {
-  active = active + 1 <= lengthItems ? active + 1 : 0;
-  reloadSlider();
-};
-prev.onclick = function () {
-  active = active - 1 >= 0 ? active - 1 : lengthItems;
-  reloadSlider();
-};
-let refreshInterval = setInterval(() => {
-  next.click();
-}, 3000);
-function reloadSlider() {
-  slider.style.left = -items[active].offsetLeft + "px";
-  //
-  let last_active_dot = document.querySelector(".slider .dots li.active");
-  last_active_dot.classList.remove("active");
-  dots[active].classList.add("active");
-
-  clearInterval(refreshInterval);
-  refreshInterval = setInterval(() => {
-    next.click();
-  }, 3000);
-}
-dots.forEach((li, key) => {
-  li.addEventListener("click", () => {
-    active = key;
-    reloadSlider();
+document.addEventListener("DOMContentLoaded", () => {
+  //Lấy thẻ HTML có id là "hamburger-menu" và "nav-menu"
+  //và lưu vào biến `hamburgermenu` và `navmenu`
+  const hamburgerMenu = document.querySelector("#hamburger-menu");
+  const navMenu = document.querySelector("#nav-menu");
+  //Gán một event listener cho nút "hamburger-menu" để xử lý sự kiện click.
+  hamburgerMenu.addEventListener("click", () => {
+    // //Callback function được gọi khi click xảy ra.
+    hamburgerMenu.classList.toggle("active");
+    //Trong callback, class "active" được thêm hoặc xóa khỏi `hamburgermenu`
+    navMenu.classList.toggle("active");
+    //và `navmenu` bằng cách sử dụng `classList.toggle()`
   });
 });
 
-window.onresize = function (event) {
-  reloadSlider();
-};
-// document.getElementById("next_btn").onclick = function () {
-//   let widthItem = document.querySelector(".box").offsetWidth;
-//   document.getElementById("formList").scrollLeft += widthItem;
-// };
-// document.getElementById("prev_btn").onclick = function () {
-//   let widthItem = document.querySelector(".item").offsetWidth;
-//   document.getElementById("formList").scrollLeft -= widthItem;
-// };
-// Mở menu ra
-let navbar_toggle = document.querySelector(".navbar_toggle");
-let wrapper = document.querySelector(".wrapper");
-navbar_toggle.onclick = function(){
-  navbar_toggle.classList.toggle('open'); //thêm class gọi toggle có thì ẩn chưa thì thêm vào
-};
-// navbar_toggle.addEventListener("click", ()=>{
-//   wrapper.classList.toggle('open');
-// });
-$(document).ready(function(){
-  $('#navbar_toggle').click(function(){
-    $('.navbar .menu').sliderToggle();
-  })
-})
+// ĐẾM SỐ
+const numbers = [
+  { id: "daily-count", value: 4000 },
+  { id: "star-count", value: 5000 },
+  { id: "app-count", value: 150 },
+];
+
+numbers.forEach((number) => {
+  const element = document.getElementById(number.id);
+  element.setAttribute("final-number", number.value);
+});
+
+function animateNumber(
+  elementId,
+  finalNumber,
+  duration = 3000,
+  startNumber = 0
+) {
+  let currentNumber = startNumber;
+  const increment = Math.ceil(finalNumber / (duration / 17));
+  const element = document.getElementById(elementId);
+  const interval = setInterval(() => {
+      currentNumber = Math.min(currentNumber + increment, finalNumber);
+      element.innerText = currentNumber.toLocaleString();
+      if (currentNumber >= finalNumber) {
+          clearInterval(interval);
+      }
+  }, 17);
+}
+
+function isElementInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+let animationTriggered = false;
+
+function checkElementsVisibility() {
+  const elementsToAnimate = document.querySelectorAll(".count-animate");
+
+  elementsToAnimate.forEach((element) => {
+      if (isElementInViewport(element)) {
+          if (!element.classList.contains("animated")) {
+              const finalNumber = parseInt(
+                  element.getAttribute("final-number")
+              );
+              animateNumber(element.id, finalNumber);
+              element.classList.add("animated");
+          }
+      }
+  });
+
+  if (
+      !animationTriggered &&
+      isElementInViewport(document.getElementById("daily-count"))
+  ) {
+      numbers.forEach(({ id, value }) => {
+          animateNumber(id, value);
+      });
+      animationTriggered = true;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", checkElementsVisibility);
+  checkElementsVisibility();
+});

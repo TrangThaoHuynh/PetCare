@@ -8,11 +8,39 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <!-- Link css -->
     <link rel="stylesheet" href="./assest/css/style.css" />
     <!-- jQuery cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link rel="shortcut icon" href="./assest/image/logo.svg" type="image/x-icon">
+
+    <link
+      rel="shortcut icon"
+      href="./assest/image/logo.svg"
+      type="image/x-icon"
+    />
+    <script>
+      // di chuyển lên đầu trang
+      $(window).scroll(function(){
+        $('#top_up').off('click');
+        $('#top_up').click(function(){
+          $('html, body').animate({scrollTop: 0}, 1000);
+            return false;
+        });
+        // Hiển thị nút Go to top khi người dùng cuộn trang xuống
+        if($(this).scrollTop() > 800) {
+          $('#top_up').fadeIn();
+        }else {
+          $('#top_up').fadeOut();
+        }
+      });
+    </script>
     <title>PET CARE</title>
   </head>
   <body>
@@ -23,12 +51,12 @@
           <!-- logo -->
           <a href="" class="logo">
             <img src="./assest/image/logo.svg" alt="Logo" />
-            PET CARE T&T
+            <span>Ani<span class="main-color">PET</span></span>
           </a>
 
           <!-- Navigation -->
-          <ul class="menu">
-            <li><a href="#" class="item">Trang&nbsp;chủ</a></li>
+          <ul class="menu" id="menu">
+            <li><a href="#" class="item" id="ab">Trang&nbsp;chủ</a></li>
             <li><a href="#" class="item">Giới&nbsp;Thiệu</a></li>
             <li class="sub">
               <a href="#" class="item">
@@ -63,57 +91,117 @@
               <p class="text">Đăng nhập</p>
             </a>
           </div>
-          <div class="wrapper">
-            <div class="navbar_toggle"></div>
+          <!-- Nav MOBLE -->
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger"></div>
           </div>
         </nav>
       </div>
     </header>
     <!-- Slider -->
-    <div class="slider">
-      <div class="list">
-        <div class="item">
-          <img src="./assest/image/slide1.jpg" alt="" />
-          <!-- <div class="info">
-        <h2>Dịch vụ tiêm chủng cho thú cưng</h2>
-        <div>
-          <ul class="bts">
-            <li class="btns"><a href="#">Xem thêm</a></li>
-            <li class="btns"><a href="#">Đặt lịch</a></li>
-          </ul>
-        </div>
-      </div> -->
-        </div>
-        <div class="item">
-          <img src="./assest/image/slide2.jpg" alt="" />
-        </div>
-        <div class="item">
-          <img src="./assest/image/slide3.jpg" alt="" />
+    <div class="hero_section">
+      <div class="hero_slide">
+        <div class="owl-carousel carousel-nav-center" id="hero-carousel">
+          <!-- Slide Item -->
+          <div class="hero-slide-item">
+            <img src="./assest/image/slide1.jpg" alt="slide1" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper delay-2">
+                <div class="item-content-title top-down delay-4"> Dịch vụ tiêm chủng cho thú cưng</div>
+                <div class="item-content-description top-down delay-6">
+                  Tiêm phòng cho thú cưng là một trong những cách hiệu quả nhất để bảo vệ người bạn lông xù yêu quý của bạn khỏi một loạt bệnh có thể đe dọa đến tính mạng. 
+                  Vắc xin hoạt động bằng cách kích thích hệ thống miễn dịch của thú cưng tạo ra các kháng thể có thể chống lại các tác nhân gây bệnh.
+                </div>
+                <div class="item-action top-down delay-8">
+                  <div class="space">
+                    <a href="#" class="btn2 btn2-hover">
+                      <span>Xem ngay</span>
+                    </a>
+                  </div> 
+                  <div class="space">
+                    <a href="#" class="btn2 btn2-hover">
+                      <span>Đặt lịch</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--slide item  -->
+          <div class="hero-slide-item">
+            <img src="./assest/image/slide2.jpg" alt="slide1" />
+            <div class="overplay"></div>
+            <div class="hero-slide-item-content">
+              <div class="item-content-wraper delay-2">
+                <div class="item-content-title top-down delay-4">Cắt tỉa và làm đẹp</div>
+                <div class="item-content-description top-down delay-6">
+                  Chúng tôi biết cách làm thế nào để thú cưng của bạn trở nên đẳng cấp hơn cá tính hơn. 
+                  Với dịch vụ cắt tỉa và làm đẹp chúng tôi sẽ giúp các bé trở thành phiên bản hoàn hảo nhất. 
+                </div>
+                <div class="item-action top-down delay-8">
+                  <div class="space">
+                    <a href="#" class="btn2 btn2-hover">
+                      <span>Xem ngay</span>
+                    </a>
+                  </div> 
+                  <div class="space">
+                    <a href="#" class="btn2 btn2-hover">
+                      <span>Đặt lịch</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- END ITEM -->
+      <!-- slide item -->
+      <div class="hero-slide-item">
+        <img src="./assest/image/slide3.jpg" alt="slide1" />
+        <div class="overplay"></div>
+        <div class="hero-slide-item-content">
+          <div class="item-content-wraper delay-2">
+            <div class="item-content-title top-down delay-4">Khách sạn thú cưng</div>
+            <div class="item-content-description top-down delay-6">
+              Mọi hành động ở PET SERVICE đều bắt đầu từ sứ mệnh Trao Gửi Yêu Thương. 
+              Mọi thú cưng mới khi đến với chúng tôi đều được quan tâm đặc biệt bởi đội ngũ Nhân viên nhiều kinh nghiệm.
+            </div>
+            <div class="item-action top-down delay-8">
+              <div class="space">
+                <a href="#" class="btn2 btn2-hover">
+                  <span>Xem ngay</span>
+                </a>
+              </div> 
+              <div class="space">
+                <a href="#" class="btn2 btn2-hover">
+                  <span>Đặt lịch</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="buttons">
-        <button id="prev"><</button>
-        <button id="next">></button>
+    <!-- END ITEM -->
+        </div>
       </div>
-      <ul class="dots">
-        <li class="active"></li>
-        <li></li>
-        <li></li>
-      </ul>
     </div>
     <!-- Dịch vụ -->
     <div id="services">
       <div class="col25">
-        <h1 style="font-size: 2rem">PET CARE T&T</h1>
+        <h1 style="font-size: 2.5rem">AniPET</h1>
         <h1>Dịch vụ</h1>
         <h1 style="text-align: right">nổi bật</h1>
       </div>
       <div class="col75">
         <div class="list_service">
           <div class="box">
-            <img src="./assest/image/service1.jpg" alt="" />
+            <div class="sub_img">
+              <div class="img">
+                <img src="./assest/image/service1.jpg" alt=""/>
+              </div>
+            </div>
             <div class="info">
-              <h2>Khám và chữa bệnh</h2>
+              <a href="" class="heading">Khám và chữa bệnh</a>
               <p>
                 Phần lớn thời gian, thú cưng của chúng ta hoạt động tích cực
                 nhất khi chúng ta hoạt động; buổi tối, cuối tuần và ngày lễ. Nó
@@ -125,13 +213,16 @@
             </div>
           </div>
           <div class="box">
-            <img src="./assest/image/service2.jpg" alt="" />
+            <div class="sub_img">
+              <div class="img">
+                <img src="./assest/image/service2.jpg" alt=""/>
+              </div>
+            </div>
             <div class="info">
-              <h2>Tiêm phòng</h2>
+              <a href="" class="heading">Dịch vụ tiêm phòng</a>
               <p>
-                Phần lớn thời gian, thú cưng của chúng ta hoạt động tích cực
-                nhất khi chúng ta hoạt động; buổi tối, cuối tuần và ngày lễ. Nó
-                là ...
+                Có nhiều loại bệnh truyền nhiễm mà thú cưng của bạn có thể mắc
+                phải nếu không được tiêm phòng...
               </p>
               <div class="button">
                 <a href="#" class="">Xem thêm</a>
@@ -139,9 +230,13 @@
             </div>
           </div>
           <div class="box">
-            <img src="./assest/image/service3.jpg" alt="" />
+            <div class="sub_img">
+              <div class="img">
+                <img src="./assest/image/service3.jpg" alt=""/>
+              </div>
+            </div>
             <div class="info">
-              <h2>cắt tỉa và làm đẹp</h2>
+              <a href="" class="heading">Khách sạn thú cưng</a>
               <p>
                 Phần lớn thời gian, thú cưng của chúng ta hoạt động tích cực
                 nhất khi chúng ta hoạt động; buổi tối, cuối tuần và ngày lễ. Nó
@@ -155,7 +250,200 @@
         </div>
       </div>
     </div>
+<!-- Why Choose Us -->
+    <div class="why_choose">
+      <div class="content">
+          <div class="infos">
+              <div class="info">
+                  <h3
+                      class="num"
+                      id="daily-count"
+                      data-final-number="4000"
+                  >
+                      4000<span>+</span>
+                  </h3>
+                  <p class="desc">Khách hàng hài lòng</p>
+              </div>
+              <div class="info">
+                  <h3
+                      class="num"
+                      id="star-count"
+                      data-final-number="5000"
+                  >
+                      5000 <span>+</span>
+                  </h3>
+                  <p class="desc">Bé được chăm sóc</p>
+              </div>
+              <div class="info">
+                  <h3
+                      class="num"
+                      id="app-count"
+                      data-final-number="150"
+                  >
+                      150 <span>+</span>
+                  </h3>
+                  <p class="desc">Booking mỗi tuần</p>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- Section Thú y tại nhà -->
+    <!-- <div id="pet_home">
+      <div class="overlay"></div>
+      <div class="contents">
+        <div class="container">
+          <h2>DỊCH VỤ TẬN TÌNH - AN TÂM CHẤT LƯỢNG</h2>
+          <p>Liên hệ ngay để được tư vấn và hỗ trợ</p>
+        </div>
+        <div class="btns">
+          <a href="">Tư vấn miễn phí</a>
+        </div>
+      </div>
+    </div> -->
+<!-- GO TO TOP -->
+      <a href="#" title="Đi lên đầu trang" id="top_up" style="text-align: center; font-size: 80px; display: none; margin-right: 10px;">&#710</a>
+      <!-- &#710 là kí đặc biệt trong HTML-->
+<!-- END GO TO TOP -->
+<!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col1">
+          <div class="container">
+            <a href="" class="logo">
+              <img src="./assest/image/logofooter.svg" alt="Logo" />
+              <span>Ani<span class="main-color">PET</span></span>
+            </a>
+            <p>
+              <strong>AniPET</strong> ra đời với mong muốn mang lại cho khách
+              hàng sự chuyên nghiệp, uy tín mang đến sự trải nghiệm tốt nhất cho
+              thú cưng của chúng ta. Với nhiều năm kinh nghiệm trong ngành dịch
+              vụ chăm sóc thú cưng bao gồm: khám và chữa bệnh, Tiêm chủng, Khách
+              sạn thú cưng, Dịch vụ thú cưng tại nhà,…
+            </p>
+            <ul class="footer-menu">
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M5 22h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-.29-.71l-8-8a1 1 0 0 0-1.41 0l-8 8A1 1 0 0 0 3 11v9a2 2 0 0 0 2 2zm5-2v-5h4v5zm-5-8.59 7-7 7 7V20h-3v-5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v5H5z"
+                    ></path>
+                  </svg>
+                  <span
+                    >317 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP Hồ Chí
+                    Minh</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
+                    ></path>
+                  </svg>
+                  <span>Hotline 0387 975 161</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                    ></path>
+                  </svg>
+                  <span>anipet@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <img src="./assest/image/dathongbao.png" width="40%" />
+          </div>
+        </div>
+        <div class="col2">
+          <div class="container-list">
+            <h4 class="title">DỊCH VỤ</h4>
+            <ul class="content-menu">
+              <li><a href="#">Khám và chữa bệnh</a></li>
+              <li><a href="#">Tiêm chủng cho thú cưng</a></li>
+              <li><a href="#">Thú y tại nhà</a></li>
+              <li><a href="#">Cắt tỉa làm đẹp</a></li>
+              <li><a href="#">Khách sạn thú cưng</a></li>
+            </ul>
+          </div>
+          <div class="space-inner"></div>
+          <div class="container-list">
+            <h4 class="title">TRUY CẬP</h4>
+            <ul class="content-menu">
+              <li><a href="#">Trang chủ</a></li>
+              <li><a href="#">Giới thiệu vể AniPET</a></li>
+              <li><a href="#">Tin tức</a></li>
+              <li>
+                <a href="#"><strong>HOTLINE 24/7</strong></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col3">
+          <h4 class="title">LIÊN HỆ</h4>
+            <form class="form">
+              <input type="text" class="your_name" placeholder="Tên bạn" />
+              <input
+                type="email"
+                class="Email"
+                placeholder="Nhập Email của bạn..."
+              />
+              <input type="submit" value="Gửi đi" class="submit">
+            </form>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      © Copy Right 2023
+      <a href="#  "
+        >Huynh Thao Trang - Le Thi Thuy Trang</a
+      >
+    </div>
     <!--Link javascript  -->
     <script src="./assest/js/main.js"></script>
+    <script src="./assest/js/bonus.js"></script>
+    <!-- thư viện owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   </body>
 </html>
