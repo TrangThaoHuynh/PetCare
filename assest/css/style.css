@@ -189,6 +189,7 @@ ul > li {
 .logo:hover {
   color: #181717;
 }
+
 /* ======= Slide ========*/
 .hero_section {
   position: relative;
@@ -609,7 +610,6 @@ footer a.logo:hover {
   html {
     font-size: 18px;
   }
-
   .row {
     display: block;
   }
@@ -666,33 +666,10 @@ footer a.logo:hover {
   html {
     font-size: 12px;
   }
-  /* .header .hamburger-menu {
-    display: block;
-    background: #000;
-  } */
-  header .header-right .hamburger {
-    display: block;
+  .navbar .menu{
+    display: none;
   }
-  header .menu {
-    margin: 0;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: fit-content;
-    background-color: #0b2239;
-    padding: 30px;
-    transition: 0.3s;
-    text-align: center;
-    z-index: -1;
-  }
-  header .menu.active {
-    top: 70px;
-  }
-  header .menu ul {
-    display: block;
-  }
-  /* .navbar .menu{
+  .navbar .menu{
     flex-direction: column;
     top: 0;
     right: 0;
@@ -704,9 +681,6 @@ footer a.logo:hover {
     align-items: center;
     z-index: 15;
   }
-  .navbar .menu > li {
-    width: 100%;
-  } */
   .btn {
     display: none;
   }
@@ -752,3 +726,4 @@ footer a.logo:hover {
     font-size: 30px;
   }
 }
+
