@@ -1,3 +1,12 @@
+// tin tức
+document.getElementById('next').onclick = function(){
+  const widthItem = document.querySelector('.item').offsetWidth;
+  document.getElementById('formList').scrollLeft += widthItem;
+}
+document.getElementById('prev').onclick = function(){
+  const widthItem = document.querySelector('.item').offsetWidth;
+  document.getElementById('formList').scrollLeft -= widthItem;
+}
 document.addEventListener("DOMContentLoaded", () => {
   //Lấy thẻ HTML có id là "hamburger-menu" và "nav-menu"
   //và lưu vào biến `hamburgermenu` và `navmenu`
