@@ -152,6 +152,9 @@ body {
   line-height: 27px;
   text-align: justify;
 }
+.text3 >p >span:hover{
+  text-decoration: underline;
+}
 .img-text3 {
   margin-top: 50px;
   display: flex;

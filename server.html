@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css style main -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+
+     <!-- jQuery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    
+    <link rel="stylesheet" href="./assest/css/server.css">
+    <!-- link animation -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+  <!-- link shortcut icon -->
+  <link
+      rel="shortcut icon"
+      href="./assest/image/logo.svg"
+      type="image/x-icon"
+    />
+    
+  <!-- JS go to top -->
+  <script>
+    //  di chuyển lên đầu trang
+    $(window).scroll(function(){
+      $('#top_up').off('click');
+      $('#top_up').click(function(){
+        $('html, body').animate({scrollTop: 0}, 1000);
+          return false;
+      });
+      // Hiển thị nút Go to top khi người dùng cuộn trang xuống
+      if($(this).scrollTop() > 800) {
+        $('#top_up').fadeIn();
+      }else {
+        $('#top_up').fadeOut();
+      }
+    });
+  </script>
+
+    <title>Dịch vụ của AniPET</title>
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+      <div class="content">
+        <nav class="navbar">
+          <!-- logo -->
+          <a href="" class="logo">
+            <img src="./assest/image/logo.svg" alt="Logo" />
+           AniPET
+          </a>
+
+          <!-- Navigation -->
+          <ul class="menu">
+            <li><a href="./index.html" class="item">Trang&nbsp;chủ</a></li>
+            <li><a href="./introduce.html" class="item">Giới&nbsp;Thiệu</a></li>
+            <li class="sub">
+              <a href="./server.html" class="item">
+                Dịch&nbsp;Vụ
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  style="fill: rgba(0, 0, 0, 1); transform: 0.5s"
+                >
+                  <path
+                    d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                  ></path>
+                </svg>
+              </a>
+              <ul class="sub_menu">
+                <li><a href="./server.html">Khám và chữa bệnh</a></li>
+                <li><a href="./server.html">Tiêm chủng cho thú cưng</a></li>
+                <li><a href="./server.html">Thú y tại nhà</a></li>
+                <li><a href="./server.html">Cắt tỉa làm đẹp</a></li>
+                <li><a href="./server.html">Khách sạn thú cưng</a></li>
+              </ul>
+            </li>
+            <li><a href="book.html" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
+            <li><a href="#" class="item">Liên&nbsp;hệ</a></li>
+          </ul>
+
+          <!-- Button -->
+          <div class="actions">
+            <a href="./login.html" class="login btn">
+              <p class="text">Đăng nhập</p>
+            </a>
+          </div>
+          <div class="wrapper">
+            <div class="navbar_toggle"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <!-- nội dung chính -->
+    <div class="include">
+        <!-- Img -->
+    <div class="main_header">
+        <img src="./assest/img/breadcrumb-1.png" alt="" />
+        <div class="animate__animated animate__pulse gioithieu">Dịch vụ của chúng tôi <br>AniPET</div>
+      </div>   
+      <div id="maincont"> 
+        <div class="main_intro">
+          <div class="text2">
+           
+        <h2>Khám và Chữa bệnh</h2>
+        <p>Tuổi thọ trung bình của thú cưng khoảng từ 10 – 15 năm và nếu như chúng ta không có các phương pháp để chăm sóc sức khỏe cho chúng một cách khoa học thông qua các buổi thăm khám sức khỏe định kỳ thì tuổi thọ của chúng sẽ bị giảm sút nhanh chóng. Thậm chí có nhiều thú cưng do không phát hiện được ra bệnh mà tuổi thọ chỉ kéo dài được từ vài tháng cho tới vài năm.</p>
+    <h3>Vì sao nên khám sức khỏe cho thú cưng tại AniPET</h3>
+    <p>Định kỳ hàng năm từ 1 – 2 lần bạn nên đưa thú cưng đi khám sức khỏe định kỳ. Việc thăm khám này sẽ giúp các bạn phát hiện sớm một số triệu chứng bệnh mà thú cưng gặp phải từ đó tiết kiệm được chi phí trong việc điều trị cũng như giúp thú cưng được khỏe mạnh hơn.
+
+        Dưới đây là những lý do mà bạn nên lựa chọn AniPET:
+        
+        <br>1.AniPET chính là một địa chỉ cung cấp dịch vụ khám, chăm sóc sức khỏe cho thú cưng uy tín, chất lượng hàng đầu tại thành phố Hồ Chí Minh. Lựa chọn thú y Thi thi bạn sẽ được yên tâm tuyệt đối về hiệu quả của dịch vụ cũng như chuyên môn của đội ngũ y bác sĩ và cơ sở trang thiết bị y tế hiện đại.
+        <br>2.Không chỉ khám chữa bệnh, Bệnh viện thú y Thi thi còn hỗ trợ các chủ thú cưng cách chăm sóc thú cưng chính xác nhất, khoa học nhất, hiện đại nhất từ đó hạn chế tối đa sự phát triển của các loại bệnh gây ảnh hưởng tới sức khỏe của thú cưng.
+        <br>3.Sử dụng dịch vụ của khám sức khỏe định kỳ cho thú cưng của thú y Thi thi bạn sẽ tiết kiệm chi phí, thời gian điều trị từ đó giúp cho thú cưng khỏe mạnh hơn, vui vẻ hơn và đáng yêu hơn.</p>
+    
+        <h3>Các công đoạn khám sức khỏe cho thú cưng</h3>
+        <p>Lựa chọn dịch vụ khám sức khỏe định kỳ tại AniPET, thú cưng của bạn sẽ được:
+           <br> 1.Khám sức khỏe tổng quát như đo cân nặng, đo nhiệt độ, đo áp huyết, kiểm tra tai, mũi, họng, mắt…
+           <br> 2.Siêu âm kiểm tra ổ bụng, gan, tim, thận.
+           <br> 3.Chụp X-quang kiểm tra xương khớp, tim phổi, hệ tiêu hóa, sỏi bàng quang, khối u ở trong cơ thể.
+           <br> 3.Xét nghiệm máu phân tích các chỉ số và kiểm tra ký sinh trùng ở trong đường máu.
+           <br> 4.Chăm sóc, vệ sinh thú cưng sạch sẽ.
+           <br> Sau khi có được kết quả của dịch vụ thì các bác sĩ sẽ tư vấn chủ nuôi về chế độ chăm sóc, nuôi dưỡng và huấn luyện thú cưng. Ngoài ra sẽ có thông tin hướng dẫn chế độ dinh dưỡng cần bổ sung để thú cưng luôn phát triển một cách khỏe mạnh.
+           <br> Có thể nói khám sức khỏe định kỳ cho thú cưng là một trong những cách tốt nhất giúp thú cưng của bạn khỏe mạnh và gia tăng tuổi thọ. Chính vì thế hãy ghé ngay AniPET để sử dụng dịch vụ đi nào.</p>
+
+           <h2>Dịch vụ tiêm chủng cho thú cưng</h2>
+           <p>
+               Tiêm phòng cho thú cưng là một trong những cách hiệu quả nhất để bảo vệ người bạn lông xù yêu quý của bạn khỏi một loạt bệnh có thể đe dọa đến tính mạng. Vắc xin hoạt động bằng cách kích thích hệ thống miễn dịch của thú cưng tạo ra các kháng thể có thể chống lại các tác nhân gây bệnh.
+
+               Tại Thú y AniPET, chúng tôi cung cấp dịch vụ tiêm phòng toàn diện cho thú cưng để đảm bảo thú cưng của bạn luôn khỏe mạnh và được bảo vệ khỏi các bệnh thông thường. Đội ngũ bác sĩ thú y giàu kinh nghiệm của chúng tôi có thể giúp bạn xác định loại vắc xin nào là cần thiết dựa trên độ tuổi, lối sống và tình trạng sức khỏe của thú cưng.
+           </p>
+           <div>
+
+           </div>
+           <h3>Tại sao phải tiêm phòng cho thú cưng của bạn?</h3>
+           <p>Vắc-xin rất quan trọng đối với sức khỏe và thể chất của thú cưng vì chúng giúp bảo vệ chúng khỏi các bệnh khác nhau. Dưới đây là một số lý do tại sao việc tiêm phòng cho thú cưng là cần thiết:
+
+               <br>1.Ngăn ngừa bệnh tật: Vắc xin có thể giúp ngăn ngừa một số bệnh nghiêm trọng và thường đe dọa đến tính mạng có thể ảnh hưởng đến vật nuôi, chẳng hạn như bệnh dại, bệnh ghẻ, parvovirus và nhiều bệnh khác.
+               <br>2.Tiết kiệm tiền: Phòng bệnh bằng vắc-xin tiết kiệm chi phí hơn nhiều so với việc điều trị những bệnh có thể phòng ngừa bằng vắc-xin.
+               <br>3.Bảo vệ sức khỏe cộng đồng: Tiêm phòng cho thú cưng của bạn cũng có thể giúp ngăn ngừa sự lây lan của bệnh từ động vật sang người, bảo vệ cả thú cưng và gia đình bạn.</p>
+         <div>
+
+         </div>
+         <h3>Các loại vắc xin</h3>
+         <p>Tại Dịch vụ Thú y AniPET, chúng tôi cung cấp một số loại vắc xin, bao gồm:
+
+           <br>1.Vắc xin cốt lõi: Những loại vắc xin này rất cần thiết và được khuyên dùng cho tất cả vật nuôi, bất kể lối sống của chúng. Ví dụ về các loại vắc xin cốt lõi bao gồm bệnh dại, bệnh sốt rét, parvovirus và adenovirus.
+           <br>2.Vắc xin không cốt lõi: Vắc xin không cốt lõi là tùy chọn và chỉ được khuyến nghị cho vật nuôi có nguy cơ mắc một số bệnh nhất định dựa trên lối sống hoặc môi trường của chúng. Ví dụ về vắc-xin không cốt lõi bao gồm bệnh Lyme, bệnh ho gà và bệnh bạch cầu ở mèo.</p>
+       <div>
+
+       </div>
+           <h3>Khi nào nên tiêm phòng cho thú cưng của bạn</h3>
+       <p>Thời gian và tần suất tiêm phòng cho thú cưng sẽ phụ thuộc vào một số yếu tố, bao gồm độ tuổi và sức khỏe của thú cưng, lối sống của chúng và tiền sử tiêm phòng trước đó. Các bác sĩ thú y của chúng tôi sẽ lập lịch tiêm chủng riêng cho thú cưng của bạn để đảm bảo chúng nhận được các loại vắc xin thích hợp vào đúng thời điểm. Tại Thú y AniPET, chúng tôi cam kết cung cấp các dịch vụ chăm sóc thú cưng chất lượng cao để giữ cho những người bạn lông xù của bạn luôn khỏe mạnh và hạnh phúc. Nếu bạn có bất kỳ câu hỏi hoặc thắc mắc nào về việc tiêm phòng cho thú cưng hoặc muốn đặt lịch hẹn, vui lòng liên hệ với chúng tôi.</p>
+   
+
+       <h2>Dịch vụ thú y tại nhà đem lại nhiều lời ích cho những người nuôi thú cưng</h2>
+       <p>Các dịch vụ Thú Y Tại Nhà AniPET bao gồm: Cấp cứu 24/24, Khám, điều trị, tiêm ngừa, triệt sản, đỡ đẻ… với giá rẻ nhất
+        <br>Với các bác sĩ có trình độ chuyên môn cao, uy tín, tận tâm sẽ là lựa chọn hàng đầu cho thú cưng của chúng ta và đó là điều mà Thi Thi Pet clinic luôn mong muốn mang đến cho các bạn.
+       </p>
+       <h3>Bác sĩ Thú y tại nhà là gì?</h3>
+       <p>Bác sĩ thú y tại nhà là dịch vụ điều trị tận nhà khi những vật nuôi bị bệnh mà không thể đưa đến các phòng khám thú y. Khi thú cưng bị bệnh các chủ vật nuôi phải cung cấp thông tin như độ tuổi, triệu chứng bệnh, trọng lượng cơ thể chó…để các bác sĩ chẩn đoán bệnh và có phương pháp điều trị đúng đắn. Chỉ cần một cuộc điện thoại là chúng tôi sẽ có mặt để có thể kịp thời chữa trị cho thú cưng của bạn.</p>
+       <h3>Vì sao nên lựa chọn dịch vụ thú y tại nhà?</h3>
+       <p>Cũng giống như việc phải chăm sóc một em bé, thú cưng cũng có đôi lúc xảy ra tình trạng đau ốm, bệnh tật,… Để khắc phục tốt nhất cách tốt nhất là đưa chó, mèo của bạn đến khám chữa trị tại phòng khám thú y tốt, chất lượng. Tuy nhiên ngày nay bạn có thể nghĩ đến cách giải quyết tiện lợi và nhanh chóng hơn bằng cách sử dụng dịch vụ thú y tại nhà. Gọi bác sĩ thú y tại nhà là cách nhanh nhất giúp thú cưng của bạn tốt hơn. Hầu hết tất cả các chủ nuôi đều chọn lựa dịch vụ này với 04 ưu điểm sau:</p>
+       <h3>Các bác sĩ sẽ có mặt kịp thời để chữa trị cho thú cưng của bạn</h3>
+       <p>Khi boss cưng của bạn bị bệnh nặng và bạn phải nhanh chóng mang bé đến phòng khám thú y. Tuy nhiên trọng lượng của bè quá lớn, không thể vận chuyển dễ dàng được, đặc biệt là đối với các giống chó lớn…
+
+        <br>Ngoài ra có một lưu ý chính là một số căn bệnh mà thú cưng mắc phải sẽ không thích hợp với việc di chuyển các em ấy đi xa. Vậy giải pháp an toàn nhất chính là gọi ngay cho các bác sĩ thú y đến khám và điều trị tại nhà…</p>
+       <h3>Các dịch vụ chăm sóc sức khỏe phục vụ 365 ngày/ năm</h3>
+       <p>Dịch vụ chăm sóc thú cưng tại nhà không chỉ phục vụ các khách hàng vào những ngày cuối tuần mà chúng tôi còn phục vụ lẫn những ngày lễ trong năm… Với tình yêu nghề và lòng yêu động vật, các bác sĩ thú y tại nhà sẽ mang đến cho thú cưng những dịch vụ chất lượng nhất.</p>
+        
+       <h2>Dịch vụ cắt tỉa & làm đẹp</h2>
+       <p>Dịch vụ cắt tỉa lông tạo kiểu cho chó mèo tại AniPET chúng tôi “cân đo đong đếm” xem kiểu tóc nào đẹp và phù hợp nhất các bé nhất. Đảm bảo sau khi được tỉa lông tạo kiểu, các bé sẽ vô cùng xinh xắn, dịch vụ bao gồm:
+        <br>*Cắt và tạo kiểu
+        <br>**Dầu gội làm sạch sâu
+        <br>***Thổi khô
+        <br>****15 phút chải lông
+        <br>*****Spritz thơm
+        <br>******Cắt móng, vệ sinh tai mắt
+        <br>*******Hỗ trợ các vấn đề về lông da, viêm da, hôi lông
+        <br>Chúng tôi luôn đồng hành cùng thú cưng của bạn mọi lúc mọi nơi. Từ đầu đến cuối, chúng tôi ưu tiên hàng đầu về sức khỏe và sức khỏe cho thú cưng của bạn.
+       </p>
+
+       <h2>Khách sạn thú cưng</h2>
+       <p>Khách sạn thú cưng được phòng khám thú y AniPET đầu tư kĩ lưỡng, sạch sẽ giúp thú cưng của bạn có được sự thoải mái nhát khi ở đây. Chúng tôi tự tin rằn đây là khách sạn thú cưng xây dựng mô hình trông giữ chăm sóc thú cưng chuyên nghiệp nhất tại Hồ Chí Minh.
+        <br>‘“Các bé đến ở Khách Sạn AniPET khi về nhà còn mập mạp , sạch sẽ , do có sự chăm sóc từ đội ngũ y Bác Sĩ tốt nhất . Có sự am hiểu về quá trình chăm sóc , nuôi dưỡng và chế độ ăn của từng bé “”
+        <br>Lời nhận xét của hầu hết các khách hàng khi gửi bé cún( chó , mèo ) tại dịch vụ trông giữ chó-mèo tại AniPET TPHCM.
+        <h3>Các dịch vụ khách sạn chó mèo chuyên nghiệp tại khách sạn thú cưng AniPET</h3>
+        <p>Với mục tiêu đem lại cảm giác ấm áp, thân thương cho thú cưng như khi ở nhà,  khách sạn cho mèo, cho chó Thú Y Thi Thi cung cấp những dịch vụ sau:</p>
+            <br><h3>1. Lưu chuồng</h3>
+            <p>Khách sạn chó mèo Thi Thi nhận trông giữ chó, mèo tất cả các ngày lễ, ngày tết, ngày nghỉ. Khách sạn rộng rãi, mát mẻ, luôn được vệ sinh sạch sẽ hàng ngày để tiêu diệt vi khuẩn, yên tĩnh, đường ít xe cộ qua lại.</p>
+            <h3>2. Chăm sóc</h3>
+            <p>*Chế độ ăn: 2 bữa/ ngày. Thức ăn có thể là cơm thịt rau đảm bảo vệ sinh, khoa học hoặc thức ăn khô, hạt Royal Canin nhập khẩu
+                *Vận động: 1 ngày chó mèo sẽ được cho vận động trên 1 tiếng
+                *Khám bệnh: Thú cưng được kiểm tra tình trạng sức khỏe trong thời gian lưu trú</p>
+                <h3>3. Làm đẹp</h3>
+                <p>goài ra, khi khách hàng yêu cầu khách sạn AniPET còn có dịch vụ thăm khám tổng quát miệng, bỏ mảng bám và cao răng bên mặt trong của răng, tỉa lông…</p>
+        
+       </p>
+
+
+
+        </div>
+        
+
+    </div>
+
+    </div>
+
+    </div>
+
+
+
+
+    <!-- GO TO TOP -->
+    <a href="#" title="Đi lên đầu trang" id="top_up" style="text-align: center; font-size: 80px; display: none; margin-right: 10px;">&#710</a>
+    <!-- &#710 là kí đặc biệt trong HTML-->
+    <!-- END GO TO TOP -->
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col1">
+          <div class="container">
+            <a href="" class="logo">
+              <img src="./assest/image/logofooter.svg" alt="Logo" />
+              <span>Ani<span class="main-color">PET</span></span>
+            </a>
+            <p>
+              <strong>AniPET</strong> ra đời với mong muốn mang lại cho khách
+              hàng sự chuyên nghiệp, uy tín mang đến sự trải nghiệm tốt nhất cho
+              thú cưng của chúng ta. Với nhiều năm kinh nghiệm trong ngành dịch
+              vụ chăm sóc thú cưng bao gồm: khám và chữa bệnh, Tiêm chủng, Khách
+              sạn thú cưng, Dịch vụ thú cưng tại nhà,…
+            </p>
+            <ul class="footer-menu">
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M5 22h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-.29-.71l-8-8a1 1 0 0 0-1.41 0l-8 8A1 1 0 0 0 3 11v9a2 2 0 0 0 2 2zm5-2v-5h4v5zm-5-8.59 7-7 7 7V20h-3v-5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v5H5z"
+                    ></path>
+                  </svg>
+                  <span
+                    >317 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP Hồ Chí
+                    Minh</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
+                    ></path>
+                  </svg>
+                  <span>Hotline 0387 975 161</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                    ></path>
+                  </svg>
+                  <span>anipet@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <img src="./assest/image/dathongbao.png" width="40%" />
+          </div>
+        </div>
+        <div class="col2">
+          <div class="container-list">
+            <h4 class="title">DỊCH VỤ</h4>
+            <ul class="content-menu">
+              <li><a href="./server.html">Khám và chữa bệnh</a></li>
+              <li><a href="./server.html">Tiêm chủng cho thú cưng</a></li>
+              <li><a href="./server.html">Thú y tại nhà</a></li>
+              <li><a href="./server.html">Cắt tỉa làm đẹp</a></li>
+              <li><a href="./server.html">Khách sạn thú cưng</a></li>
+            </ul>
+          </div>
+          <div class="space-inner"></div>
+          <div class="container-list">
+            <h4 class="title">TRUY CẬP</h4>
+            <ul class="content-menu">
+              <li><a href="./index.html">Trang chủ</a></li>
+              <li><a href="./introduce.html">Giới thiệu vể AniPET</a></li>
+              <li><a href="#">Tin tức</a></li>
+              <li>
+                <a href="#"><strong>HOTLINE 24/7</strong></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col3">
+          <h4 class="title">LIÊN HỆ</h4>
+            <form class="form">
+              <input type="text" class="your_name" placeholder="Tên bạn" />
+              <input
+                type="email"
+                class="Email"
+                placeholder="Nhập Email của bạn..."
+              />
+              <input type="submit" value="Gửi đi" class="submit">
+            </form>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      © Copy Right 2023
+      <a href="#  "
+        >Huynh Thao Trang - Le Thi Thuy Trang</a
+      >
+    </div>
+
+</body>
+</html>

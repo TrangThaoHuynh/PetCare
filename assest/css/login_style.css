@@ -103,7 +103,7 @@ body {
   color: #444;
   padding-right: 20px;
 }
-.btn {
+.btn1 {
   width: 150px;
   height: 50px;
   border: none;
@@ -115,7 +115,7 @@ body {
   text-transform: uppercase;
   cursor: pointer;
 }
-.btn:hover {
+.btn1:hover {
   color: #fff;
   background: #000;
 }
@@ -234,7 +234,7 @@ a {
     width: 90vw;
     height: 100vh;
   }
-  .btn,
+  .btn1,
   .btn2 {
     font-size: 0.9rem;
   }
