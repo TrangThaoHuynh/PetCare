@@ -14,9 +14,17 @@
     />
     <!-- Style css -->
     <link rel="stylesheet" href="./assest/css/style.css" />
+
     <!-- Style Login css -->
     <link rel="stylesheet" href="./assest/css/login_style.css" />
-    <title>signin-signup</title>
+
+    <!-- link shortcut icon -->
+    <link
+      rel="shortcut icon"
+      href="./assest/image/logo.svg"
+      type="image/x-icon"
+    />
+    <title>Đăng nhập - Đăng ký AniPET</title>
   </head>
   <body>
     <!-- header -->
@@ -75,9 +83,9 @@
     </header>
     <!-- FROM MAIN -->
     <div class="main_form">
-      <div class="container">
+      <div class="formal">
         <div class="signin-signup">
-          <form action="" class="sign-in-form">
+          <form action="" class="sign-in-form" id="page">
             <h2 class="title">Đăng nhập</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -89,17 +97,17 @@
             </div>
             <input type="submit" value="Đăng nhập" class="btn" />
             <p class="social-text">Hoặc kết nối với</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
+            <div class="social">
+              <a href="#" class="social-icon1">
                 <i class="fab fa-facebook"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -107,7 +115,7 @@
               Chưa có tài khoản? <a href="#" id="sign-up-btn2">Đăng ký</a>
             </p>
           </form>
-          <form action="" class="sign-up-form">
+          <form action="" class="sign-up-form" id="page">
             <h2 class="title">Đăng ký</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -123,17 +131,17 @@
             </div>
             <input type="submit" value="Đăng ký" class="btn" />
             <p class="social-text">Hoặc kết nối với</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
+            <div class="social">
+              <a href="#" class="social-icon1">
                 <i class="fab fa-facebook"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-google"></i>
               </a>
-              <a href="" class="social-icon">
+              <a href="" class="social-icon1">
                 <i class="fab fa-linkedin-in"></i>
               </a>
             </div>
@@ -281,15 +289,15 @@
         </div>
         <div class="col3">
           <h4 class="title">LIÊN HỆ</h4>
-            <form class="form">
-              <input type="text" class="your_name" placeholder="Tên bạn" />
-              <input
-                type="email"
-                class="Email"
-                placeholder="Nhập Email của bạn..."
-              />
-              <input type="submit" value="Gửi đi" class="submit">
-            </form>
+          <form class="form">
+            <input type="text" class="your_name" placeholder="Tên bạn" />
+            <input
+              type="email"
+              class="Email"
+              placeholder="Nhập Email của bạn..."
+            />
+            <input type="submit" value="Gửi đi" class="submit" />
+          </form>
         </div>
       </div>
     </footer>
@@ -297,9 +305,7 @@
     <!-- COPY RIGHT SECTION -->
     <div class="copyright">
       ©&nbsp;Copy Right 2023
-      <a href="#  "
-        >Huynh Thao Trang - Le Thi Thuy Trang</a
-      >
+      <a href="#  ">Huynh Thao Trang - Le Thi Thuy Trang</a>
     </div>
     <!-- link js -->
     <script src="/assest/js/login.js"></script>

@@ -9,48 +9,48 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 #form-booking {
-  width: 100%;
-  /* width: 713px; */
 
-  height: 1396px;
+  width: 100%;
   max-width: 50%;
   margin-right: auto;
   margin-left: auto;
 }
 
 .book {
+  padding-top: 100px;
   font-size: 17px;
-  color: #222222;
+  color: #393d72;
+
 }
 
-.title {
-  color: #4c4c4c;
-}
-
-.title > p {
+.mark > p {
   font-size: 16px;
   margin-bottom: 30px;
   line-height: 1.2em;
+  color: #393d72;
 }
 
-.title > h3 {
+.mark > h3 {
+  color: #393d72;
   font-size: 18px;
   line-height: 20px;
   text-align: left;
 }
 
 .note {
+  color: #393d72;
   font-size: 90%;
   font-size: 15px;
   padding: 5px 0 20px 0;
 }
 
 .line-frm > h1 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 20px;
   text-align: left;
   padding: 29px 0 10px 0;
   position: relative;
+  color: #393d72;
 }
 .input input,
 #loai,
@@ -108,14 +108,15 @@ textarea {
   opacity: 1;
 }
 
-.btn {
+.but {
+
   display: inline-block;
   height: 42px;
 }
-.btn input {
+.but input {
   padding: 15px 20px;
 }
-.btn > input {
+.but > input {
   margin-top: 20px;
   cursor: pointer;
   background-color: #222222;
@@ -129,12 +130,13 @@ textarea {
   width: 112px;
   height: 42px;
 }
-.btn:hover input {
-  background-color: #8b8b8b;
-  color: #464040;
+.but:hover input {
+  background-color: #1fd1f9;
+  color: #222222;
 }
 
 .error {
+  font-size: 18px;
   margin-top: 25px;
   color: #793838;
 }

@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giới thiệu về AniPET</title>
 
-    <!-- link css -->
+    <!-- css style main -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+
+    <!-- css introduce -->
     <link rel="stylesheet" href="./assest/css/introduce.css" />
 
     <!-- link animation -->
@@ -14,6 +17,29 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
 
+<link
+      rel="shortcut icon"
+      href="./assest/image/logo.svg"
+      type="image/x-icon"
+    />
+    
+  <!-- JS go to top -->
+  <script>
+    // di chuyển lên đầu trang
+    $(window).scroll(function(){
+      $('#top_up').off('click');
+      $('#top_up').click(function(){
+        $('html, body').animate({scrollTop: 0}, 1000);
+          return false;
+      });
+      // Hiển thị nút Go to top khi người dùng cuộn trang xuống
+      if($(this).scrollTop() > 800) {
+        $('#top_up').fadeIn();
+      }else {
+        $('#top_up').fadeOut();
+      }
+    });
+  </script>
   </head>
   <body>
     <!-- header -->
@@ -53,7 +79,7 @@
                 <li><a href="#">Khách sạn thú cưng</a></li>
               </ul>
             </li>
-            <li><a href="#" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
+            <li><a href="book.html" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
             <li><a href="#" class="item">Liên&nbsp;hệ</a></li>
           </ul>
 
@@ -177,7 +203,7 @@
             <ul class="top">
               <li>
                 <div class="inner">
-                  <div class="icon">
+                  <div class="symbol">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -190,7 +216,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <div class="title">
+                  <div class="document">
                     <h3>Khám và chữa bệnh</h3>
                     <p>Những thiết bị y tế tân tiến</p>
                   </div>
@@ -198,7 +224,7 @@
               </li>
               <li>
                 <div class="inner">
-                  <div class="icon">
+                  <div class="symbol">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -211,7 +237,7 @@
                       ></path>
                     </svg>
                   </div>
-                  <div class="title">
+                  <div class="document">
                     <h3>Tiêm chủng - Thú Y tại nhà</h3>
                     <p>Sứ mệnh Trao gửi yêu thương</p>
                   </div>
@@ -223,11 +249,11 @@
             <ul class="bottom">
               <li>
                 <div class="inner">
-                  <div class="icon">
+                  <div class="symbol">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #0072ff;">
                       <path d="M10 6.5C10 4.57 8.43 3 6.5 3S3 4.57 3 6.5 4.57 10 6.5 10a3.45 3.45 0 0 0 1.613-.413l2.357 2.528-2.318 2.318A3.46 3.46 0 0 0 6.5 14C4.57 14 3 15.57 3 17.5S4.57 21 6.5 21s3.5-1.57 3.5-3.5c0-.601-.166-1.158-.434-1.652l2.269-2.268L17 19.121a3 3 0 0 0 2.121.879H22L9.35 8.518c.406-.572.65-1.265.65-2.018zM6.5 8C5.673 8 5 7.327 5 6.5S5.673 5 6.5 5 8 5.673 8 6.5 7.327 8 6.5 8zm0 11c-.827 0-1.5-.673-1.5-1.5S5.673 16 6.5 16s1.5.673 1.5 1.5S7.327 19 6.5 19z"></path><path d="m17 4.879-3.707 4.414 1.414 1.414L22 4h-2.879A3 3 0 0 0 17 4.879z"></path></svg>
                   </div>
-                  <div class="title">
+                  <div class="document">
                     <h3>Làm đẹp thú cưng</h3>
                     <p>Những thiết bị y tế tân tiến</p>
                   </div>
@@ -235,12 +261,12 @@
               </li>
               <li>
                 <div class="inner">
-                  <div class="icon">
+                  <div class="symbol">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #0072ff;">
                       <path d="M7 14.001h2v2H7z"></path><path d="M19 2h-8a2 2 0 0 0-2 2v6H5c-1.103 0-2 .897-2 2v9a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2zM5 20v-8h6v8H5zm9-12h-2V6h2v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2V6h2v2z"></path></svg>
                     </svg>
                   </div>
-                  <div class="title">
+                  <div class="document">
                     <h3>Khách sạn thú cưng</h3>
                     <p>Sứ mệnh Trao gửi yêu thương</p>
                   </div>
@@ -257,7 +283,141 @@
       </div>
     </div>
     </div>
-
-    <link rel="stylesheet" href="/assest/js/introduce.js" />
+  <!-- GO TO TOP -->
+  <a href="#" title="Đi lên đầu trang" id="top_up" style="text-align: center; font-size: 80px; display: none; margin-right: 10px;">&#710</a>
+  <!-- FOOTER -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col1">
+          <div class="container">
+            <a href="" class="logo">
+              <img src="./assest/image/logofooter.svg" alt="Logo" />
+              <span>Ani<span class="main-color">PET</span></span>
+            </a>
+            <p>
+              <strong>AniPET</strong> ra đời với mong muốn mang lại cho khách
+              hàng sự chuyên nghiệp, uy tín mang đến sự trải nghiệm tốt nhất cho
+              thú cưng của chúng ta. Với nhiều năm kinh nghiệm trong ngành dịch
+              vụ chăm sóc thú cưng bao gồm: khám và chữa bệnh, Tiêm chủng, Khách
+              sạn thú cưng, Dịch vụ thú cưng tại nhà,…
+            </p>
+            <ul class="footer-menu">
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M5 22h14a2 2 0 0 0 2-2v-9a1 1 0 0 0-.29-.71l-8-8a1 1 0 0 0-1.41 0l-8 8A1 1 0 0 0 3 11v9a2 2 0 0 0 2 2zm5-2v-5h4v5zm-5-8.59 7-7 7 7V20h-3v-5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v5H5z"
+                    ></path>
+                  </svg>
+                  <span
+                    >317 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TP Hồ Chí
+                    Minh</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
+                    ></path>
+                  </svg>
+                  <span>Hotline 0387 975 161</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    viewBox="0 0 24 24"
+                    style="fill: rgb(208, 200, 200)"
+                  >
+                    <path
+                      d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+                    ></path>
+                  </svg>
+                  <span>anipet@gmail.com</span>
+                </a>
+              </li>
+            </ul>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+            <img src="./assest/image/dathongbao.png" width="40%" />
+          </div>
+        </div>
+        <div class="col2">
+          <div class="container-list">
+            <h4 class="title">DỊCH VỤ</h4>
+            <ul class="content-menu">
+              <li><a href="#">Khám và chữa bệnh</a></li>
+              <li><a href="#">Tiêm chủng cho thú cưng</a></li>
+              <li><a href="#">Thú y tại nhà</a></li>
+              <li><a href="#">Cắt tỉa làm đẹp</a></li>
+              <li><a href="#">Khách sạn thú cưng</a></li>
+            </ul>
+          </div>
+          <div class="space-inner"></div>
+          <div class="container-list">
+            <h4 class="title">TRUY CẬP</h4>
+            <ul class="content-menu">
+              <li><a href="#">Trang chủ</a></li>
+              <li><a href="#">Giới thiệu vể AniPET</a></li>
+              <li><a href="#">Tin tức</a></li>
+              <li>
+                <a href="#"><strong>HOTLINE 24/7</strong></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col3">
+          <h4 class="title">LIÊN HỆ</h4>
+            <form class="form">
+              <input type="text" class="your_name" placeholder="Tên bạn" />
+              <input
+                type="email"
+                class="Email"
+                placeholder="Nhập Email của bạn..."
+              />
+              <input type="submit" value="Gửi đi" class="submit">
+            </form>
+        </div>
+      </div>
+    </footer>
+    <!-- END FOOTER SECTION -->
+    <!-- COPY RIGHT SECTION -->
+    <div class="copyright">
+      © Copy Right 2023
+      <a href="#  "
+        >Huynh Thao Trang - Le Thi Thuy Trang</a
+      >
+    </div>
+    <!-- js -->
+    <script src="./assest/js/introduce.js"></script>
   </body>
 </html>
