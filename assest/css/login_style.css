@@ -204,26 +204,38 @@ a {
   font-weight: bold;
 }
 /*Animation*/
+
+
+/* add classlist - chữ sẽ di chuyển phần tử ngang theo trục X  */
 .formal.sign-up-mode::before {
-  transform: translateX(0);
+  transform: translateX(0); 
 }
 .formal.sign-up-mode .right-panel .image,
 .formal.sign-up-mode .right-panel .content {
+
+  /* di chuyển các phần tử ngang theo trục X một khoảng cách bằng 200% chiều rộng của chính nó */
   transform: translateX(200%);
 }
 .formal.sign-up-mode .left-panel .image,
 .formal.sign-up-mode .left-panel .content {
   transform: translateX(0);
 }
+/* formal và sign-up-mode. opacity: 0 sẽ đặt độ mờ của phần tử là 0, trong suốt kh nhìn thấy được */
 .formal.sign-up-mode #page.sign-in-form {
   opacity: 0;
 }
+
+/* hoàn toàn không trong suốt nhìn thấy được */
 .formal.sign-up-mode #page.sign-up-form {
   opacity: 1;
 }
+
+/* Các sự kiện con trỏ: không có : không thể tương tác với phần tử .right-panel bằng chuột hoặc màn hình cảm ứng  */
 .formal.sign-up-mode .right-panel {
   pointer-events: none;
 }
+
+/* right-panel` sẽ phản ứng với tất cả các sự kiện con trỏ như di chuột, nhấp chuột hoặc chạm */
 .formal.sign-up-mode .left-panel {
   pointer-events: all;
 }

@@ -17,13 +17,11 @@ function formvalidate() {
   if (yourname.length == 0) {
     // tên rỗng -> hiện thông báo lỗi
     document.getElementById("yourname_empty").style.display = "block";
-    document.getElementById("yourname").style.display = "block";
 
     result = false;
   } else {
     // ngược lại thì ẩn thông báo lỗi
     document.getElementById("yourname_empty").style.display = "none";
-    document.getElementById("yourname").style.display = "block";
   }
 
   if (phone.length == 0) {

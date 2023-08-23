@@ -257,6 +257,9 @@ ul > li {
   margin-right: 50px;
 }
 /*======= Nút điều hướng của slider =========*/
+
+/* dùng thư viện carousel */
+
 .carousel-nav-center {
   position: relative;
 }
@@ -606,6 +609,7 @@ footer a.logo:hover {
 #top_up:hover {
   color: #fff;
 }
+
 @media screen and (max-width: 1024px) {
   html {
     font-size: 18px;
@@ -683,6 +687,10 @@ footer a.logo:hover {
   }
   .btn {
     display: none;
+  }
+  .btn{
+    display: flex;
+    font-size: 5px;
   }
   .row {
     display: block;
