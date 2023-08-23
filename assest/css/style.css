@@ -661,7 +661,7 @@ footer a.logo:hover {
   position: fixed;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 999;
   width: 3.5rem;
   height: 6rem;
   color: #0072ff;

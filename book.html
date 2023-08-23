@@ -13,6 +13,18 @@
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
       rel="stylesheet"
     />
+
+    <!-- link icon của footer -->
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+     <!-- jQuery cdn -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     
     <!-- Style css -->
     <link rel="stylesheet" href="./assest/css/style.css" />
@@ -23,6 +35,25 @@
     />
   
     <title>Đặt lịch ngay</title>
+  
+<!-- JS go to top -->
+<script>
+  //  di chuyển lên đầu trang
+  $(window).scroll(function(){
+    $('#top_up').off('click');
+    $('#top_up').click(function(){
+      $('html, body').animate({scrollTop: 0}, 1000);
+        return false;
+    });
+    // Hiển thị nút Go to top khi người dùng cuộn trang xuống
+    if($(this).scrollTop() > 800) {
+      $('#top_up').fadeIn();
+    }else {
+      $('#top_up').fadeOut();
+    }
+  });
+</script>
+
   </head>
   <body>
     <!-- header -->
@@ -37,8 +68,8 @@
 
           <!-- Navigation -->
           <ul class="menu" id="menu">
-            <li><a href="#" class="item">Trang&nbsp;chủ</a></li>
-            <li><a href="#" class="item">Giới&nbsp;Thiệu</a></li>
+            <li><a href="./index.html" class="item">Trang&nbsp;chủ</a></li>
+            <li><a href="./introduce.html" class="item">Giới&nbsp;Thiệu</a></li>
             <li class="sub">
               <a href="#" class="item">
                 Dịch&nbsp;Vụ
@@ -62,7 +93,7 @@
                 <li><a href="#">Khách sạn thú cưng</a></li>
               </ul>
             </li>
-            <li><a href="#" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
+            <li><a href="./book.html" class="item">Đặt&nbsp;lịch&nbsp;hẹn</a></li>
             <li><a href="#" class="item">Liên&nbsp;hệ</a></li>
           </ul>
 
@@ -281,6 +312,9 @@
 
       <div class="error">Hãy sửa lỗi trước khi gửi mẫu này!</div>
     </form>
+
+<!-- GO TO TOP -->
+<a href="#" title="Đi lên đầu trang" id="top_up" style="text-align: center; font-size: 80px; display: none; margin-right: 10px;">&#710</a>
 
 <!-- FOOTER SECTION -->
 <footer class="footer">
