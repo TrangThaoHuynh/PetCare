@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const navToggler = document.querySelector(".nav-toggler");
 navToggler.addEventListener("click", navToggle);
 
@@ -27,6 +28,31 @@ function navToggle() {
 //     //và `navmenu` bằng cách sử dụng `classList.toggle()`
 //   });
 // });
+=======
+// tin tức
+document.getElementById('next').onclick = function(){
+  const widthItem = document.querySelector('.item').offsetWidth;
+  document.getElementById('formList').scrollLeft += widthItem;
+}
+document.getElementById('prev').onclick = function(){
+  const widthItem = document.querySelector('.item').offsetWidth;
+  document.getElementById('formList').scrollLeft -= widthItem;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  //Lấy thẻ HTML có id là "hamburger-menu" và "nav-menu"
+  //và lưu vào biến `hamburgermenu` và `navmenu`
+  const hamburgerMenu = document.querySelector("#hamburger-menu");
+  const navMenu = document.querySelector("#nav-menu");
+  //Gán một event listener cho nút "hamburger-menu" để xử lý sự kiện click.
+  hamburgerMenu.addEventListener("click", () => {
+    // //Callback function được gọi khi click xảy ra.
+    hamburgerMenu.classList.toggle("active");
+    //Trong callback, class "active" được thêm hoặc xóa khỏi `hamburgermenu`
+    navMenu.classList.toggle("active");
+    //và `navmenu` bằng cách sử dụng `classList.toggle()`
+  });
+});
+>>>>>>> afc2c4584c8c8331556f0ef5e2ce2137b7aabfe0
 
 // ĐẾM SỐ
 const numbers = [
