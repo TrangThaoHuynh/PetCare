@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Lấy thẻ HTML có id là "hamburger-menu" và "nav-menu"
   //và lưu vào biến `hamburgermenu` và `navmenu`
   const hamburgerMenu = document.querySelector("#hamburger-menu");
-  const navMenu = document.querySelector("#nav-menu");
+  const navMenu = document.querySelector("#nav_menu");
   //Gán một event listener cho nút "hamburger-menu" để xử lý sự kiện click.
   hamburgerMenu.addEventListener("click", () => {
     // //Callback function được gọi khi click xảy ra.
@@ -35,23 +35,22 @@ function animateNumber(
   const increment = Math.ceil(finalNumber / (duration / 17));
   const element = document.getElementById(elementId);
   const interval = setInterval(() => {
-      currentNumber = Math.min(currentNumber + increment, finalNumber);
-      element.innerText = currentNumber.toLocaleString();
-      if (currentNumber >= finalNumber) {
-          clearInterval(interval);
-      }
+    currentNumber = Math.min(currentNumber + increment, finalNumber);
+    element.innerText = currentNumber.toLocaleString();
+    if (currentNumber >= finalNumber) {
+      clearInterval(interval);
+    }
   }, 17);
 }
 
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <=
-          (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <=
-          (window.innerWidth || document.documentElement.clientWidth)
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
 }
 
@@ -61,25 +60,23 @@ function checkElementsVisibility() {
   const elementsToAnimate = document.querySelectorAll(".count-animate");
 
   elementsToAnimate.forEach((element) => {
-      if (isElementInViewport(element)) {
-          if (!element.classList.contains("animated")) {
-              const finalNumber = parseInt(
-                  element.getAttribute("final-number")
-              );
-              animateNumber(element.id, finalNumber);
-              element.classList.add("animated");
-          }
+    if (isElementInViewport(element)) {
+      if (!element.classList.contains("animated")) {
+        const finalNumber = parseInt(element.getAttribute("final-number"));
+        animateNumber(element.id, finalNumber);
+        element.classList.add("animated");
       }
+    }
   });
 
   if (
-      !animationTriggered &&
-      isElementInViewport(document.getElementById("daily-count"))
+    !animationTriggered &&
+    isElementInViewport(document.getElementById("daily-count"))
   ) {
-      numbers.forEach(({ id, value }) => {
-          animateNumber(id, value);
-      });
-      animationTriggered = true;
+    numbers.forEach(({ id, value }) => {
+      animateNumber(id, value);
+    });
+    animationTriggered = true;
   }
 }
 

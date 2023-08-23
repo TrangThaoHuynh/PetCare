@@ -189,62 +189,6 @@ ul > li {
 .logo:hover {
   color: #181717;
 }
-
-.wrapper {
-  --size: 30px;
-  width: var(--size);
-  height: var(--size);
-  cursor: pointer;
-  z-index: 101;
-  position: relative;
-  display: none;
-  align-items: center;
-}
-
-.navbar_toggle {
-  position: relative;
-}
-
-.navbar_toggle,
-.navbar_toggle::before,
-.navbar_toggle::after {
-  width: var(--size);
-  height: 3px;
-  border-radius: 0.5rem;
-  background-color: black;
-  transition: 0.4s;
-}
-
-.navbar_toggle::before,
-.navbar_toggle::after {
-  content: "";
-  position: absolute;
-  left: 0;
-}
-
-.navbar_toggle::before {
-  top: -10px;
-}
-
-.navbar_toggle::after {
-  bottom: -10px;
-}
-
-.wrapper.active .navbar_toggle {
-  background-color: transparent;
-}
-
-.hamburger-menu.active .hamburger::before {
-  transform-origin: top left;
-  transform: rotate(45deg);
-  left: 6px;
-}
-
-.hamburger-menu.active .hamburger::after {
-  transform-origin: bottom left;
-  transform: rotate(-45deg);
-  left: 6px;
-}
 /* ======= Slide ========*/
 .hero_section {
   position: relative;
@@ -254,15 +198,16 @@ ul > li {
   position: relative;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.5);
-
   font-size: 21px;
 }
 
 .hero-slide-item img {
   width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   opacity: 0.8;
 }
 
@@ -402,12 +347,14 @@ ul > li {
   justify-content: center;
   align-items: center;
 }
-.list_service .box {
+.list_service > .box {
   width: 33.33%;
+}
+.list_service .box {
   padding: 10px;
   margin: 10px;
-  width: 400px;
-  height: 410px;
+  width: 500px;
+  height: 450px;
   border: 1px solid rgba(121, 211, 250, 0.8);
   border-radius: 15px;
   background: #fff;
@@ -433,7 +380,8 @@ ul > li {
 }
 .box .info {
   font-size: 1.4rem;
-  padding: 10px;
+  width: 100%;
+  padding: 40px 10px;
   color: var(--font-color);
 }
 .box .info .heading {
@@ -446,7 +394,7 @@ ul > li {
   padding-top: 10px;
 }
 .box .info .button {
-  margin-top: 15px;
+  margin-top: 20px;
   color: #000;
 }
 .box .info .button a {
@@ -460,19 +408,6 @@ ul > li {
   color: #0072ff;
   font-weight: bold;
   transform: scale(1.2);
-}
-/* ========= Giới thiệu dịch vụ thú y tại nhà =========== */
-
-#pet_home {
-  background-color: #0072ff;
-  background-size: cover;
-  background-image: url(/assest/image/about.jpg);
-  background-repeat: no-repeat;
-  background-size: 24% auto;
-  padding-top: 20%;
-  background-position: top right;
-  position: absolute;
-  width: 100%;
 }
 /* ====== Why Choose Us ====== */
 .why_choose {
@@ -674,6 +609,7 @@ footer a.logo:hover {
   html {
     font-size: 18px;
   }
+
   .row {
     display: block;
   }
@@ -692,46 +628,85 @@ footer a.logo:hover {
   .col3 .form input {
     width: 80%;
   }
-  /* .row {
+  .hero-slide-item {
+    padding-top: 60%;
+  }
+  .item-content-wraper {
+    width: 80%;
+    /* padding: 5px; */
+  }
+  .item-content-title {
+    font-size: 2.5rem;
+  }
+  #services {
     display: block;
   }
-  .row .col1 {
+  #services .col25 {
+    width: 100%;
+    text-align: center;
+    display: flex;
+  }
+  #services .col25 h1:first-child {
+    display: none;
+  }
+  #services .col25 > h1 {
+    margin-left: 15px;
+  }
+  #services .col75 {
     width: 100%;
   }
-  .col1 img {
-    width: 20%;
+  .list_service .box {
+    height: 35rem;
   }
-  .row .col2,
-  .row .col3 {
-    margin-right: 50px;
-    margin-left: 50px;
+  .box .info .buttom {
+    margin-bottom: 79px;
   }
-  .col3 .form input{
-    width: 100%;
-  } */
 }
 @media screen and (max-width: 768px) {
   html {
     font-size: 12px;
   }
-  #wrapper {
-    display: flex;
+  /* .header .hamburger-menu {
+    display: block;
+    background: #000;
+  } */
+  header .header-right .hamburger {
+    display: block;
   }
-  .navbar .menu {
-    position: fixed;
+  header .menu {
+    margin: 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #0b2239;
+    padding: 30px;
+    transition: 0.3s;
+    text-align: center;
+    z-index: -1;
+  }
+  header .menu.active {
+    top: 70px;
+  }
+  header .menu ul {
+    display: block;
+  }
+  /* .navbar .menu{
     flex-direction: column;
     top: 0;
     right: 0;
+    position: fixed;
     min-width: 300px;
     height: 100%;
     background: #fff;
     justify-content: center;
     align-items: center;
-    z-index: 99;
+    z-index: 15;
   }
   .navbar .menu > li {
     width: 100%;
-  }
+  } */
   .btn {
     display: none;
   }
@@ -752,5 +727,28 @@ footer a.logo:hover {
   }
   .col3 .form-lh {
     margin-left: 50px;
+  }
+  .hero-slide-item {
+    height: 500px;
+    padding-top: unset;
+    width: 100%;
+  }
+  #services {
+    padding: 0 20px;
+    display: block;
+  }
+  #services .col75 {
+    width: 100%;
+  }
+  .list_service .box {
+    height: 38rem;
+    margin-left: auto;
+  }
+  .col75 .list_service {
+    display: block;
+    width: 100%;
+  }
+  .box .info .heading {
+    font-size: 30px;
   }
 }
