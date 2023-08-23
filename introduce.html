@@ -41,14 +41,14 @@
     $(window).scroll(function(){
       $('#top_up').off('click');
       $('#top_up').click(function(){
-        $('html, body').animate({scrollTop: 0}, 1000);
+        $('html, body').animate({scrollTop: 0}, 1000);   //đưa lên đầu trang với thời gian là một giây
           return false;
       });
       // Hiển thị nút Go to top khi người dùng cuộn trang xuống
       if($(this).scrollTop() > 800) {
-        $('#top_up').fadeIn();
+        $('#top_up').fadeIn(); //ẩn đi go to top
       }else {
-        $('#top_up').fadeOut();
+        $('#top_up').fadeOut(); //hiện ra
       }
     });
   </script>

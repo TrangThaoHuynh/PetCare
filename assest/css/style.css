@@ -257,6 +257,9 @@ ul > li {
   margin-right: 50px;
 }
 /*======= Nút điều hướng của slider =========*/
+
+/* dùng thư viện carousel */
+
 .carousel-nav-center {
   position: relative;
 }
@@ -710,6 +713,23 @@ footer a.logo:hover {
 @media screen and (max-width: 1024px) {
   html {
     font-size: 18px;
+    width: 100%;
+  }
+  .navbar{
+    width: 100%;
+  }
+  .navbar .menu {
+    display: none;
+  }
+  .actions{
+    display: none;
+  }
+  .btn {
+    display: none;
+  }
+  .btn {
+    display: flex;
+    font-size: 5px;
   }
   .row {
     display: block;
@@ -773,6 +793,9 @@ footer a.logo:hover {
   html {
     font-size: 12px;
   }
+  .navbar{
+    width: 100%;
+  }
   .navbar .menu {
     display: none;
   }
@@ -790,6 +813,10 @@ footer a.logo:hover {
   }
   .btn {
     display: none;
+  }
+  .btn {
+    display: flex;
+    font-size: 5px;
   }
   .row {
     display: block;
