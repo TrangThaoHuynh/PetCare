@@ -3,7 +3,8 @@ $("#ab").click(function () {
   location.reload();
 });
 document.addEventListener("DOMContentLoaded", () => {
-  //setting owl carousel //thêm icon thành hai nút điều hướng slide
+  //setting owl carousel 
+  //thêm icon thành hai nút điều hướng slide
   const navText = [
     "<i class='bx bx-chevron-left'></i>",
     "<i class='bx bx-chevron-right'></i>",

@@ -1,12 +1,3 @@
-// tin tức
-document.getElementById("next").onclick = function () {
-  const widthItem = document.querySelector(".ite").offsetWidth;
-  document.getElementById("formList").scrollLeft += widthItem;
-};
-document.getElementById("prev").onclick = function () {
-  const widthItem = document.querySelector(".ite").offsetWidth;
-  document.getElementById("formList").scrollLeft -= widthItem;
-};
 // ĐẾM SỐ
 const numbers = [
   { id: "daily-count", value: 4000 },
@@ -78,3 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", checkElementsVisibility);
   checkElementsVisibility();
 });
+// tin tức
+document.getElementById("next").onclick = function () {
+  const widthItem = document.querySelector(".ite").offsetWidth;
+  document.getElementById("formList").scrollLeft += widthItem;
+};
+document.getElementById("prev").onclick = function () {
+  const widthItem = document.querySelector(".ite").offsetWidth;
+  document.getElementById("formList").scrollLeft -= widthItem;
+};
