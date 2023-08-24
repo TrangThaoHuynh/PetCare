@@ -715,16 +715,13 @@ footer a.logo:hover {
     font-size: 18px;
     width: 100%;
   }
-  .navbar{
+  .navbar {
     width: 100%;
   }
   .navbar .menu {
     display: none;
   }
-  .actions{
-    display: none;
-  }
-  .btn {
+  .actions .btn {
     display: none;
   }
   .btn {
@@ -793,7 +790,7 @@ footer a.logo:hover {
   html {
     font-size: 12px;
   }
-  .navbar{
+  .navbar {
     width: 100%;
   }
   .navbar .menu {
@@ -811,7 +808,7 @@ footer a.logo:hover {
     align-items: center;
     z-index: 15;
   }
-  .btn {
+  .actions .btn {
     display: none;
   }
   .btn {
